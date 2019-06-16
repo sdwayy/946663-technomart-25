@@ -5,8 +5,9 @@ var openMapPopup = document.querySelector(".min-map-img");
 var mapPopup = document.querySelector(".map-container");
 var openCartPopupBtns = document.querySelectorAll(".buy-btn");
 var cartPopup = document.querySelector(".cart-popup");
+var continueBtnCart = document.querySelector(".continue-btn-cart");
 
-closeBtn.forEach(function(item){
+closeBtn.forEach(function (item) {
   item.addEventListener("click", function (evt) {
     evt.preventDefault();
     feedbackForm && feedbackForm.classList.add("visually-hidden")
@@ -20,9 +21,9 @@ closeBtn.forEach(function(item){
 
 if (openFeedbackFormBtn) {
   openFeedbackFormBtn.addEventListener("click", function (evt) {
-   evt.preventDefault();
-   feedbackForm.classList.remove("visually-hidden");
-   feedbackForm.classList.add("show-popup-animation");
+    evt.preventDefault();
+    feedbackForm.classList.remove("visually-hidden");
+    feedbackForm.classList.add("show-popup-animation");
   });
 }
 
@@ -34,11 +35,16 @@ if (openMapPopup) {
   });
 }
 
-openCartPopupBtns.forEach(function(item){
+openCartPopupBtns.forEach(function (item) {
   item.addEventListener("click", function (evt) {
     evt.preventDefault();
     cartPopup.classList.remove("visually-hidden");
     cartPopup.classList.add("show-popup-animation");
   });
-}) 
+})
 
+continueBtnCart.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  cartPopup.classList.add("visually-hidden");
+  cartPopup.classList.remove("show-popup-animation");
+})

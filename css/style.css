@@ -160,7 +160,7 @@ img {
   height: 15px;
   background-image: url(./../img/icon-cart.svg);
   opacity: 0.3;
-  top: 13px;
+  top: 11px;
   left: 14px;
 }
 
@@ -955,6 +955,7 @@ img {
   display: -ms-flexbox;
   display: flex;
   padding: 0;
+  font-family: 'Cuprum', Arial, sans-serif;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -968,9 +969,9 @@ img {
   position: absolute;
   background-color: #ffffff;
   width: 214px;
-  padding-top: 33px;
+  padding-top: 40px;
   padding-bottom: 20px;
-  min-height: 138px;
+  min-height: 144px;
 }
 
 .perforators-list .product-card:nth-child(3n) {
@@ -1360,11 +1361,18 @@ img {
   border: none;
   padding: 0;
   margin: 0;
-  margin-bottom: 45px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 28px;
+  margin-bottom: 17px;
 }
 
 .filter fieldset:last-of-type {
-  margin-bottom: 55px;
+  margin-bottom: 31px;
+  border: none;
+}
+
+.filter .manufacturers-fieldset {
+  padding-bottom: 23px;
 }
 
 .manufacturer-name {
@@ -1376,18 +1384,23 @@ img {
   position: absolute;
   width: 27px;
   height: 23px;
-  left: 0;
-  top: -2px;
+  left: -4px;
+  top: -4px;
   background-image: url(./../img/checkbox-off.svg);
+  background-position: center;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 2px;
   background-repeat: no-repeat;
 }
 
 .filter-check-input:checked~.manufacturer-name::before {
   background-image: url(./../img/checkbox-on.svg);
+  background-position-x: 4px;
 }
 
-.filter-check-input:focus+.manufacturer-name {
-  border: 2px solid #ee3643;
+.filter-check-input:focus+.manufacturer-name::before {
+  border: 1px solid #ee3643;
   border-radius: 3px;
 }
 
@@ -1400,10 +1413,14 @@ img {
   position: absolute;
   width: 25px;
   height: 25px;
-  left: 0;
-  top: -2px;
+  left: -3px;
+  top: -4px;
+  padding: 2px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
   background-image: url(./../img/radio-off.svg);
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .filter-radio-input:checked+.pwr-category-name::before {
@@ -1411,8 +1428,8 @@ img {
   background-repeat: no-repeat;
 }
 
-.filter-radio-input:focus~.pwr-category-name {
-  border: 2px solid #ee3643;
+.filter-radio-input:focus~.pwr-category-name::before {
+  border: 1px solid #ee3643;
   border-radius: 3px;
 }
 
@@ -1563,7 +1580,7 @@ img {
   background-color: #f7f3ec;
   min-height: 38px;
   margin-bottom: 18px;
-  padding: 10px 18px;
+  padding: 10px 15px 10px 18px;
   text-transform: uppercase;
 }
 
@@ -1585,7 +1602,7 @@ img {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 42px;
+  width: 47px;
 }
 
 .sort-type {
@@ -1623,12 +1640,23 @@ img {
   color: #ee3643;
 }
 
+.sort-icon {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 2px;
+}
+
 .sort-icon:hover path {
   fill: #000000;
 }
 
 .sort-btn:checked+.sort-icon path {
   fill: #ee3643;
+}
+
+.sort-btn:focus+.sort-icon {
+  border: 1px solid #ee3643;
+  border-radius: 3px;
 }
 
 .perforators-list {
@@ -2032,6 +2060,16 @@ img {
 .feedback-form input {
   width: 220px;
   height: 38px;
+}
+
+.feedback-form input[type="text"]:hover,
+.feedback-form textarea:hover {
+  border: 2px solid #b5b5b5;
+}
+
+.feedback-form input[type="text"]:focus,
+.feedback-form textarea:focus {
+  border: 2px solid #ee3643;
 }
 
 .feedback-form input,
