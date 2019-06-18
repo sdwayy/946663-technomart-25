@@ -1393,6 +1393,7 @@ img {
   height: 23px;
   left: -4px;
   top: -4px;
+  padding: 2px;
   border: 1px solid transparent;
   background-image: url(./../img/checkbox-off.svg);
   background-position: center;
@@ -1402,9 +1403,14 @@ img {
   background-repeat: no-repeat;
 }
 
-.filter-check-input:checked~.manufacturer-name::before {
+.filter-check-input:checked+.manufacturer-name::before {
   background-image: url(./../img/checkbox-on.svg);
   background-position-x: 4px;
+}
+
+.filter-check-input:checked:focus+.manufacturer-name::before {
+  border: 1px solid #ee3643;
+  border-radius: 3px;
 }
 
 .filter-check-input:focus+.manufacturer-name::before {
@@ -1425,8 +1431,8 @@ img {
   position: absolute;
   width: 25px;
   height: 25px;
-  left: -3px;
-  top: -4px;
+  left: -4px;
+  top: -6px;
   padding: 2px;
   border: 1px solid transparent;
   -webkit-box-sizing: content-box;
@@ -1441,12 +1447,12 @@ img {
   background-repeat: no-repeat;
 }
 
-.filter-radio-input:focus~.pwr-category-name::before {
+.filter-radio-input:checked:focus+.pwr-category-name::before {
   border: 1px solid #ee3643;
   border-radius: 3px;
 }
 
-.filter-radio-input:active~.pwr-category-name::before {
+.filter-radio-input:active+.pwr-category-name::before {
   border: 1px solid transparent;
 }
 
@@ -1597,7 +1603,7 @@ img {
   background-color: #f7f3ec;
   min-height: 38px;
   margin-bottom: 18px;
-  padding: 10px 15px 10px 18px;
+  padding: 3px 15px 3px 18px;
   text-transform: uppercase;
 }
 
@@ -1619,7 +1625,7 @@ img {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 47px;
+  width: 46px;
 }
 
 .sort-type {
@@ -1658,9 +1664,9 @@ img {
 }
 
 .sort-icon {
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+  display: block;
   padding: 2px;
+  border: 1px solid transparent;
 }
 
 .sort-icon:hover path {
@@ -1675,7 +1681,9 @@ img {
   border: 1px solid #ee3643;
   border-radius: 3px;
 }
-
+.sort-btn:active+.sort-icon {
+  border: 1px solid transparent;
+}
 .perforators-list {
   display: -webkit-box;
   display: -ms-flexbox;

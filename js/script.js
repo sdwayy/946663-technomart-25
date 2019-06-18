@@ -48,3 +48,4 @@ continueBtnCart.addEventListener("click", function (evt) {
   cartPopup.classList.add("visually-hidden");
   cartPopup.classList.remove("show-popup-animation");
 })
+ 
