@@ -6,7 +6,6 @@ var mapPopup = document.querySelector(".map-container");
 var openCartPopupBtns = document.querySelectorAll(".buy-btn");
 var cartPopup = document.querySelector(".cart-popup");
 var continueBtnCart = document.querySelector(".continue-btn-cart");
-var servicePointBtn = document.querySelector(".service-name-point");
 
 closeBtn.forEach(function (item) {
   item.addEventListener("click", function (evt) {
