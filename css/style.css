@@ -855,12 +855,14 @@ img {
 }
 
 .first-slide {
+  background-color: #926f64;
   background-image: url(./../img/drils.jpg);
   background-repeat: no-repeat;
   z-index: 2;
 }
 
 .second-slide {
+  background-color: #d7c7b0;
   background-image: url(./../img/perforators.jpg);
   background-repeat: no-repeat;
   z-index: 1;
@@ -943,6 +945,10 @@ img {
   font-weight: bold;
   font-family: 'PT Sans', Arial, sans-serif;
   padding: 4px 2px 20px 2px;
+}
+
+.product-card del {
+  color: #a9a9a9;
 }
 
 .product-card .price {
@@ -1099,7 +1105,7 @@ img {
   position: relative;
   width: 1200px;
   margin: 0 auto;
-  padding: 60px 130px 95px 130px;
+  padding: 60px 120px 4px 130px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -1120,12 +1126,12 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 55px;
 }
 
 .services-list {
   position: relative;
   width: 250px;
-  padding-top: 55px;
   min-height: 244px;
   margin-right: 58px;
 }
@@ -1134,7 +1140,7 @@ img {
   content: "";
   position: absolute;
   z-index: 2;
-  top: 13px;
+  top: -40px;
   right: 10px;
   width: 10px;
   height: 279px;
@@ -1171,14 +1177,14 @@ img {
   background-color: #293449;
 }
 
+.service-point-wrapper {
+  min-height: 280px;
+  flex-grow: 1;
+}
 
 .service-point {
-  width: 620px;
   min-height: 280px;
-  position: absolute;
-  left: 449px;
-  top: 212px;
-  padding: 20px 10px 20px 2px;
+  padding-left: 12px;
 }
 
 .service-point .section-title {
@@ -1189,7 +1195,7 @@ img {
   background-color: #f4f8f9;
   background-image: url(../img/delivery-logo.png);
   background-repeat: no-repeat;
-  background-position: 152px 45px;
+  background-position: 163px 22px;
 }
 
 .service-delivery p {
@@ -1214,12 +1220,13 @@ img {
   background-position: 152px 20px;
 }
 
-.credit-btn {
-  width: 195px;
+.service-credit p {
+  margin-bottom: 35px;
 }
 
-.service-active {
-  z-index: 2;
+
+.credit-btn {
+  width: 195px;
 }
 
 .service-point h3 {
@@ -1282,7 +1289,7 @@ img {
 .delivery-companies li::before {
   content: "";
   position: absolute;
-  top: 10px;
+  top: 9px;
   left: -1px;
   width: 26px;
   height: 2px;
@@ -1386,6 +1393,7 @@ img {
   height: 23px;
   left: -4px;
   top: -4px;
+  border: 1px solid transparent;
   background-image: url(./../img/checkbox-off.svg);
   background-position: center;
   -webkit-box-sizing: content-box;
@@ -1404,6 +1412,10 @@ img {
   border-radius: 3px;
 }
 
+.filter-check-input:active+.manufacturer-name::before {
+  border: 1px solid transparent;
+}
+
 .pwr-category-name {
   padding-left: 35px;
 }
@@ -1416,6 +1428,7 @@ img {
   left: -3px;
   top: -4px;
   padding: 2px;
+  border: 1px solid transparent;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   background-image: url(./../img/radio-off.svg);
@@ -1431,6 +1444,10 @@ img {
 .filter-radio-input:focus~.pwr-category-name::before {
   border: 1px solid #ee3643;
   border-radius: 3px;
+}
+
+.filter-radio-input:active~.pwr-category-name::before {
+  border: 1px solid transparent;
 }
 
 .filter label {
