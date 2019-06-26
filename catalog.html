@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>HTML Academy: Техномарт</title>
   <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.min.css">
   <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
 </head>
@@ -35,15 +35,9 @@
       </div>
       <div class="user-container-wrapper">
         <div class="user-container">
-          <a href="#" class="username-container">Равшан Джамшутович</a>
-          <a href="#" class="logout">
+          <a href="#" class="username-container" title="Ваш профиль">Равшан Джамшутович</a>
+          <a href="#" class="logout" title="Logout">
             <span class="visually-hidden">Выйти из профиля</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17">
-              <g fill="#c5c5c5">
-                <path fill="#c5c5c5" d="M21 8.5L12.125 0v6h-6v5h6v6z" />
-                <path fill="#c5c5c5" d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z" />
-              </g>
-            </svg>
           </a>
         </div>
         <ul class="user-nav list">
@@ -135,33 +129,38 @@
               <legend>Производители:</legend>
               <ul class="manufacturers-list list">
                 <li>
-                  <label>
-                    <input class="filter-check-input visually-hidden" type="checkbox" name="bosch" checked>
-                    <span class="manufacturer-name">BOSCH</span>
+                  <label class="check">
+                    <input class="check-input visually-hidden" type="checkbox" name="bosch" checked tabindex="-1">
+                    <span class="check-box" tabindex="0"></span>
+                    BOSCH
                   </label>
                 </li>
                 <li>
-                  <label>
-                    <input class="filter-check-input visually-hidden" type="checkbox" name="interscol">
-                    <span class="manufacturer-name">ИНТЕРСКОЛ</span>
+                  <label class="check">
+                    <input class="check-input visually-hidden" type="checkbox" name="interscol" tabindex="-1">
+                    <span class="check-box" tabindex="0"></span>
+                    ИНТЕРСКОЛ
                   </label>
                 </li>
                 <li>
-                  <label>
-                    <input class="filter-check-input visually-hidden" type="checkbox" name="makita" checked>
-                    <span class="manufacturer-name">MAKITA</span>
+                  <label class="check">
+                    <input class="check-input visually-hidden" type="checkbox" name="makita" checked tabindex="-1">
+                    <span class="check-box" tabindex="0"></span>
+                    MAKITA
                   </label>
                 </li>
                 <li>
-                  <label>
-                    <input class="filter-check-input visually-hidden" type="checkbox" name="Dewalt">
-                    <span class="manufacturer-name">DEWALT</span>
+                  <label class="check">
+                    <input class="check-input visually-hidden" type="checkbox" name="Dewalt" tabindex="-1">
+                    <span class="check-box" tabindex="0"></span>
+                    DEWALT
                   </label>
                 </li>
                 <li>
-                  <label>
-                    <input class="filter-check-input visually-hidden" type="checkbox" name="hitachi">
-                    <span class="manufacturer-name">HITACHI</span>
+                  <label class="check">
+                    <input class="check-input visually-hidden" type="checkbox" name="hitachi" tabindex="-1">
+                    <span class="check-box" tabindex="0"></span>
+                    HITACHI
                   </label>
                 </li>
               </ul>
@@ -170,15 +169,17 @@
               <legend class="power">Питание:</legend>
               <ul class="power-list list">
                 <li>
-                  <label>
-                    <input class="filter-radio-input visually-hidden" type="radio" name="power-group" value="with-battery" checked>
-                    <span class="pwr-category-name">Аккумуляторные</span>
+                  <label class="pwr-item">
+                    <input class="filter-radio-input visually-hidden" type="radio" name="power-group" value="with-battery" checked tabindex="-1"> 
+                    <span class="pwr-radio" tabindex="0"></span>
+                    Аккумуляторные
                   </label>
                 </li>
                 <li>
-                  <label>
-                    <input class="filter-radio-input visually-hidden" type="radio" name="power-group" value="wired">
-                    <span class="pwr-category-name">Сетевые</span>
+                  <label class="pwr-item">
+                    <input class="filter-radio-input visually-hidden" type="radio" name="power-group" value="wired" tabindex="-1">
+                    <span class="pwr-radio" tabindex="0"></span>
+                    Сетевые
                   </label>
                 </li>
               </ul>
@@ -204,16 +205,16 @@
             </div>
             <div class="sort-btn-container">
               <label>
-                <input class="sort-btn visually-hidden" type="radio" value="ascending" name="sort-buttons" checked>
-                <span class="sort-icon" title="Сортировать по возрастанию">
+                <input class="sort-btn visually-hidden" type="radio" value="ascending" name="sort-buttons" checked tabindex="-1">
+                <span class="sort-icon" title="Сортировать по возрастанию" tabindex="0">
                   <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                     <path fill="#c5c5c5" d="M5.5 0L0 10h11z" />
                   </svg>
                 </span>
               </label>
               <label>
-                <input class="sort-btn visually-hidden" type="radio" value="descending" name="sort-buttons">
-                <span class="sort-icon" title="Сортировать по убыванию">
+                <input class="sort-btn visually-hidden" type="radio" value="descending" name="sort-buttons" tabindex="-1">
+                <span class="sort-icon" title="Сортировать по убыванию"  tabindex="0">
                   <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                     <path fill="#c5c5c5" d="M5.5 10L0 0h11" />
                   </svg>
@@ -486,8 +487,8 @@
           </li>
         </ul>
         <div class="footer-bottom-links">
-          <p>
-            <span class="footer-feedback-link">Обратная связь:</span>
+          <p class="footer-feedback-link">
+            <span>Обратная связь:</span>
             <a href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
           <p>
