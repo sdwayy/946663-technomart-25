@@ -1,4 +1,4 @@
-# Cat-energy
+# Technomart
 
 > [Preview link](https://sdwayy.github.io/Technomart-HTML-CSS-level-1/)
 
